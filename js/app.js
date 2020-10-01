@@ -2,8 +2,19 @@
 
 const hornArrary = [];
 
-$.ajax('data/page-1.json', { method: 'GET', dataType: 'JSON' }).then(horn => {
-  new HornInfo(horn).render();
+$.ajax('../page1.json').then(data => {
+  console.log('data:  ', data);
+
+  data.forEach($HornTemplate => {
+    let $newHorn = $HornTemplate.clone();
+    let hornPath = $newHorn.image_url;
+    let image = document.getElementById('image');
+    let $newimage = image.clone();
+    let phototemplate = document.getElementById('photo_template');
+    image.src = hornPath;
+
+    phototemplate.append($newimage);
+  });
 });
 
 function HornInfo(object) {
