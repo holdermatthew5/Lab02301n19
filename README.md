@@ -4,7 +4,7 @@ Lab 02 Photo Gallery with filter and sort oprtions
 Number and name of feature: #1 Display Images
 Estimate of time needed to complete: 1hour
 
-Start time: 12:30
+Start time: 1:30
 
 Finish time: _____
 
