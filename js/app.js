@@ -41,6 +41,14 @@ tempArray.forEach(value => {
 
 }
 
-$
+$('select').on('change', handler);
+funtction handler(event) {
+  $('section').hide();
+  hornArrary.forEach((object)=>{
+    if(event.target.value === object.keyword){
+      $('section[id = ${object.keyword}]').show();
+    }
+  });
+}
 
 
