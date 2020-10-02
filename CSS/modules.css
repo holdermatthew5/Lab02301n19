@@ -14,5 +14,5 @@ img {
   height: 100px;
   float: left;
   margin: 5px;
-  border: 2px black;
+  border: 2px solid black;
 }
