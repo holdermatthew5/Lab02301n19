@@ -1,0 +1,16 @@
+
+h1 {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+
+select {
+  margin-top: 20px;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  float: left;
+}

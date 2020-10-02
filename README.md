@@ -6,24 +6,24 @@ Estimate of time needed to complete: 1hour
 
 Start time: 1:30
 
-Finish time: _____
+Finish time: 4:30
 
-Actual time needed to complete: _____
+Actual time needed to complete: 3 hours
 
 Number and name of feature: #2 Filter images
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 1
 
-Start time: _____
+Start time: 5:35
 
 Finish time: _____
 
 Actual time needed to complete: _____
 
 Number and name of feature: #3 Style the application
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 1 hour
 
-Start time: _____
+Start time: 4:30
 
-Finish time: _____
+Finish time: 5:30
 
 Actual time needed to complete: _____

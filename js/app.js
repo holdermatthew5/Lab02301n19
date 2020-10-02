@@ -4,8 +4,9 @@ const hornArrary = [];
 
 $.ajax('../data/page-1.json').then(data => {
   console.log('data:  ', data);
-
-  data.forEach($HornTemplate => {
+  data.forEach(object => new HornInfo(object.image_url, object.title, object.description, object.keyword, object.horns));
+  console.log(hornArrary);
+  hornArrary.forEach($HornTemplate => {
     let $newHorn = document.createElement('img');
     let hornPath = $HornTemplate.image_url;
     let phototemplate = document.getElementById('photo_template');
