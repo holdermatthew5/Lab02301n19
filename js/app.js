@@ -2,18 +2,16 @@
 
 const hornArrary = [];
 
-$.ajax('../page1.json').then(data => {
+$.ajax('../data/page-1.json').then(data => {
   console.log('data:  ', data);
 
   data.forEach($HornTemplate => {
-    let $newHorn = $HornTemplate.clone();
-    let hornPath = $newHorn.image_url;
-    let image = document.getElementById('image');
-    let $newimage = image.clone();
+    let $newHorn = document.createElement('img');
+    let hornPath = $HornTemplate.image_url;
     let phototemplate = document.getElementById('photo_template');
-    image.src = hornPath;
-
-    phototemplate.append($newimage);
+    $newHorn.setAttribute('src', hornPath);
+    console.log($newHorn);
+    phototemplate.append($newHorn);
   });
 });
 
