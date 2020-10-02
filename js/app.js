@@ -1,6 +1,7 @@
 'use strict';
 const hornArrary = [];
 
+
 function filter(keyword) {
   $.ajax('../data/page-1.json').then(data => {
     console.log('data:  ', data);
@@ -13,6 +14,7 @@ function filter(keyword) {
 filter();
 
 function HornInfo(image_url, title, description, keyword, horns) {
+
   console.log(title);
   this.imgUrl = image_url;
   this.title = title;
@@ -51,4 +53,3 @@ HornInfo.dropDown = () => {
   }
 };
 
-console.log(hornArrary);
