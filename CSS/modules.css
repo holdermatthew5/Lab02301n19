@@ -13,4 +13,10 @@ img {
   width: 100px;
   height: 100px;
   float: left;
+  border: 2px solid white;
+}
+
+section {
+  width: 520px;
+  margin: auto;
 }
