@@ -8,20 +8,21 @@ $.ajax('../data/page-1.json').then(data => {
   console.log(hornArrary);
   hornArrary.forEach($HornTemplate => {
     let $newHorn = document.createElement('img');
-    let hornPath = $HornTemplate.image_url;
+    let hornPath = $HornTemplate.imgUrl;
     let phototemplate = document.getElementById('photo_template');
     $newHorn.setAttribute('src', hornPath);
-    console.log($newHorn);
+    //console.log($newHorn);
     phototemplate.append($newHorn);
   });
 });
 
-function HornInfo(object) {
-  this.imgUrl = object.image_url;
-  this.title = object.title;
-  this.description = object.description;
-  this.keyword = object.keyword;
-  this.horns = object.horns;
+function HornInfo(image_url,title,description,keyword,horns) {
+  console.log(title);
+  this.imgUrl = image_url;
+  this.title = title;
+  this.description = description;
+  this.keyword = keyword;
+  this.horns = horns;
   hornArrary.push(this);
 }
 
@@ -60,7 +61,7 @@ HornInfo.dropDown = () => {
   }
 
 };
-
+/*
 new HornInfo('http://3.bp.blogspot.com/_DBYF1AdFaHw/TE-f0cDQ24I/AAAAAAAACZg/l-FdTZ6M7z8/s1600/Unicorn_and_Narwhal_by_dinglehopper.jpg',
   'UniWhal', 'A unicorn and a narwhal nuzzling their horns', 'narwhal', 1);
 new HornInfo('https://images.unsplash.com/photo-1512636618879-bbe79107e9e3?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bd9460ee6d1ddbb6b1ca7be86dfc4590&auto=format&fit=crop&w=1825&q=80', 'Rhino Family', 'Mother (or father) rhino with two babies', 'rhino', 2);
@@ -85,3 +86,4 @@ new HornInfo('https://imgc.allpostersimages.com/img/print/posters/dlillc-jackson
 new HornInfo('https://www.nps.gov/band/learn/nature/images/short-horned-lizard-open-mouth-18.jpg?maxwidth=650&autorotate=false', 'Horned Lizard', 'Fave food: ants', 'lizard', 100);
 new HornInfo('https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Smaug_par_David_Demaret.jpg/290px-Smaug_par_David_Demaret.jpg', 'Smaug', 'Fan illustration of Smaug from \'The Hobbit\'', 'dragon', 100);
 
+*/
