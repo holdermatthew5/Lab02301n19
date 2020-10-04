@@ -19,6 +19,7 @@ Start time: 7:00
 Finish time: 8:35
 
 Actual time needed to complete: 1.5 hour
+
 --------------------------------------------
 
 Number and name of feature: #3 Style the application
@@ -74,3 +75,5 @@ Start time: 6
 Finish time: 8
 
 Actual time needed to complete: 2
+
+Actual time needed to complete: 1 hour

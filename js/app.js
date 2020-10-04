@@ -10,6 +10,7 @@ function changePage() {
     pageChange = '../data/page-1.json';
     console.log('2nd' + pageChange);
   }
+
 }
 // changePage();
 $.ajax('../data/page-1.json').then(data => {
@@ -23,7 +24,6 @@ $.ajax('../data/page-1.json').then(data => {
 })
 
 function HornInfo(image_url, title, description, keyword, horns) {
-  // console.log(title);
   this.imgUrl = image_url;
   this.title = title;
   this.description = description;

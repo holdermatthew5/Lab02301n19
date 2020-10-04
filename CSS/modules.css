@@ -1,4 +1,3 @@
-
 h1 {
   font-size: 25px;
   font-weight: bold;
@@ -70,3 +69,4 @@ img {
 }
 
 .dropdown:hover .dropdown-content {display: block;}
+}
