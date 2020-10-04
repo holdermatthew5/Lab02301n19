@@ -3,4 +3,21 @@ body {
   margin: 10px;
 }
 
+main{
+  display: flex;
+}
 
+#left{
+  order: 1;
+  height: 500px;
+}
+
+#main{
+  order: 2;
+  height: 500px;
+}
+
+#right{
+  order: 3;
+  height: 500px;
+}
