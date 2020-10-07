@@ -10,7 +10,6 @@ function changePage() {
     pageChange = '../data/page-1.json';
     console.log('2nd' + pageChange);
   }
-
 }
 
 $.ajax('../data/page-1.json').then(data => {
