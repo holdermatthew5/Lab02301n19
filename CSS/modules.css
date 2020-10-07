@@ -13,14 +13,12 @@ img {
   width: 100px;
   height: 100px;
   float: left;
-<<<<<<< HEAD
   border: 2px solid white;
 }
 
 section {
   width: 520px;
   margin: auto;
-=======
   margin: 5px;
   border: 2px solid black;
 }
@@ -77,5 +75,3 @@ section {
 }
 
 .dropdown:hover .dropdown-content {display: block;}
->>>>>>> 8dbdf5e8376d88b0717753cdfd33f99baa732fd0
-}
