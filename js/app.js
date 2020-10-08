@@ -8,7 +8,14 @@ function pageOne() {
 }
 
 function pageTwo() {
-  render(2)
+  $.ajax('../data/page-2.json').then(data => {
+    console.log('words');
+    data.forEach(object => {
+      let horn = new HornInfo(object.image_url, object.title, object.description, object.keyword, object.horns, 2);
+    });
+    HornInfo.dropDown(data);
+    render(2)
+  })
 }
 
 $.ajax('../data/page-1.json').then(data => {
@@ -17,13 +24,6 @@ $.ajax('../data/page-1.json').then(data => {
   });
   render(1);
   HornInfo.dropDown(data);
-  console.log(data);
-  $.ajax('../data/page-2.json').then(data => {
-    data.forEach(object => {
-      let horn = new HornInfo(object.image_url, object.title, object.description, object.keyword, object.horns, 2);
-    });
-    HornInfo.dropDown(data);
-  })
 })
 
 
