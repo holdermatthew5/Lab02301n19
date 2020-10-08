@@ -1,6 +1,6 @@
 'use strict';
 let hornArrary = [];
-const hornNumber = ['one', 'two', 'three', 'one-hundred']
+const hornNumber = [1, 2, 3, 100]
 let hornNum = '';
 
 function pageOne() {
@@ -101,7 +101,7 @@ function filterHorns(Event) {
 
   hornArrary.forEach((object) => {
     if (Event.target.value === object.keyword) {
-      // console.log(Event.target.value);
+      console.log(object);
       $('.' + Event.target.value).show();
     }
 
@@ -112,16 +112,16 @@ function sortByHorn(Event) {
   $('section').hide();
   hornArrary.forEach((object) => {
     if (object.horns === 1) {
-      hornNum = 'one';
+      hornNum = 1;
     } else if (object.horns === 2) {
-      hornNum = 'two';
+      hornNum = 2;
     } else if (object.horns === 3) {
-      hornNum = 'three';
+      hornNum = 3;
     } else {
-      hornNum = 'one-hundred';
+      hornNum = 100;
     }
-    if (Event.target.value === hornNum) {
-      console.log(Event.target.value);
+    console.log(Event.target.value);
+    if (Event.target.value == hornNum) {
       let classes = Event.target.value;
       console.log($('.' + classes));
       $('.' + classes).show();
