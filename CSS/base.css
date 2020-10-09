@@ -1,23 +1,11 @@
 body {
+  width: 960px;
   text-align: center;
-  margin: 10px;
+  margin: auto;
 }
 
 main{
   display: flex;
+  flex-wrap: wrap;
 }
 
-#left{
-  order: 1;
-  height: 500px;
-}
-
-#main{
-  order: 2;
-  height: 500px;
-}
-
-#right{
-  order: 3;
-  height: 500px;
-}

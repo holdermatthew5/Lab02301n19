@@ -17,10 +17,10 @@ img {
 }
 
 section {
-  width: 520px;
-  margin: auto;
+  width: 120px;
   margin: 5px;
   border: 2px solid black;
+  /* flex-wrap: wrap; */
 }
 
 .pagination {
@@ -75,3 +75,18 @@ section {
 }
 
 .dropdown:hover .dropdown-content {display: block;}
+
+#left{
+  order: 1;
+  height: 500px;
+}
+
+#main{
+  order: 2;
+  height: 500px;
+}
+
+#right{
+  order: 3;
+  height: 500px;
+}
