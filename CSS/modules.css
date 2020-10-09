@@ -76,8 +76,6 @@ section {
 
 .dropdown:hover .dropdown-content {display: block;}
 
-/*==================================================================*/
-
 #left{
   order: 1;
   height: 500px;
