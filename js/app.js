@@ -4,14 +4,23 @@ const hornNumber = [1, 2, 3, 100]
 let hornNum = '';
 
 function pageOne() {
-  render(1)
+  $.ajax('../data/page-1.json').then(data => {
+    hornArrary = [];
+    data.forEach(object => {
+      let horn = new HornInfo(object.image_url, object.title, object.description, object.keyword, object.horns, 1);
+      hornArrary.push(horn);
+    });
+    HornInfo.dropDown(data);
+    render(1)
+  })
 }
 
 function pageTwo() {
   $.ajax('../data/page-2.json').then(data => {
-    console.log('words');
+    hornArrary = [];
     data.forEach(object => {
       let horn = new HornInfo(object.image_url, object.title, object.description, object.keyword, object.horns, 2);
+      hornArrary.push(horn);
     });
     HornInfo.dropDown(data);
     render(2)
@@ -19,8 +28,10 @@ function pageTwo() {
 }
 
 $.ajax('../data/page-1.json').then(data => {
+  hornArrary = [];
   data.forEach(object => {
     let horn = new HornInfo(object.image_url, object.title, object.description, object.keyword, object.horns, 1);
+    hornArrary.push(horn);
   });
   render(1);
   HornInfo.dropDown(data);
@@ -34,7 +45,6 @@ function HornInfo(image_url, title, description, keyword, horns, page) {
   this.keyword = keyword;
   this.horns = horns;
   this.page = page
-  hornArrary.push(this);
 }
 
 // renders without Mustach.js
@@ -44,7 +54,6 @@ function HornInfo(image_url, title, description, keyword, horns, page) {
 //   hornArrary.forEach(object => {
 //     if (object.horns === 1) {
 //       hornNum = 'one';
-//       // console.log(Event.target.value);
 //     } else if (object.horns === 2) {
 //       hornNum = 'two';
 //     } else if (object.horns === 3) {
@@ -64,11 +73,9 @@ function HornInfo(image_url, title, description, keyword, horns, page) {
 
 // renders with Mustache.js
 function render(pageNumber) {
-  // console.log(hornArrary);
   $('section').remove();
   hornArrary.forEach(obj => {
     if (obj.page === pageNumber) {
-      // console.log(obj.page)
       let $template = $('#mustache-tmpl').html();
       let mustTmpl = Mustache.render($template, obj);
       $('main').append(mustTmpl);
@@ -101,7 +108,6 @@ function filterHorns(Event) {
 
   hornArrary.forEach((object) => {
     if (Event.target.value === object.keyword) {
-      console.log(object);
       $('.' + Event.target.value).show();
     }
 
@@ -120,10 +126,8 @@ function sortByHorn(Event) {
     } else {
       hornNum = 100;
     }
-    console.log(Event.target.value);
     if (Event.target.value == hornNum) {
       let classes = Event.target.value;
-      console.log($('.' + classes));
       $('.' + classes).show();
     }
 
