@@ -18,17 +18,20 @@
       <p>{{description}}</p>
     </section>
   </script>
-</head>
-
-<body>
-  <header>
-    <h1>The Gallery of Horns</h1>
+  <script type="text/template" id="dropdown-tmpl">
     <select id="s1">
       <option value="default">Filter</option>
     </select>
     <select id="s2">
       <option value="default">sort</option>
     </select>
+  </script>
+</head>
+
+<body>
+  <header>
+    <h1>The Gallery of Horns</h1>
+    <div id="dropdown"></div>
 
     <p>Next/Previous:</p>
     <div class="pagination">

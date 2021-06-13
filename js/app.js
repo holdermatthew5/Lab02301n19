@@ -87,7 +87,12 @@ HornInfo.dropDown = () => {
   let tempArray = [];
   hornArrary.forEach((value) => tempArray.push(value.keyword));
 
-  (hornArrary).forEach(value => {
+  $('select').remove();
+  let $dropdown = $('#dropdown-tmpl').html();
+  let dropTmpl = Mustache.render($dropdown);
+  $('#dropdown').append(dropTmpl);
+  
+  hornArrary.forEach(value => {
     const $newOptionTag = $('<option></option>');
     $newOptionTag.attr('class', value.keyword);
     $newOptionTag.text(value.keyword);
